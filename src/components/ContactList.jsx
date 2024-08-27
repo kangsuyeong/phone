@@ -12,7 +12,7 @@ const ContactList = () => {
     if (keyword == "") {
       setSelectedList(contactList);
     } else {
-      let list = contactList.filter((item) => item.name === keyword);
+      let list = contactList.filter((item) => item.name.includes(keyword));
       setSelectedList(list);
     }
   }, [keyword, contactList]);
